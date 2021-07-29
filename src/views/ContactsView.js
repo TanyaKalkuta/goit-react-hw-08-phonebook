@@ -7,6 +7,9 @@ import ContactList from '../Component/ContactList';
 // import { fetchContacts } from './redux/phonebook/phonebook-operations';
 
 class ContactsView extends React.Component {
+  // componentDidMount() {
+  //   this.props.onFetchContacts();
+  // }
   render() {
     return (
       <Container>
@@ -23,5 +26,9 @@ class ContactsView extends React.Component {
     );
   }
 }
+
+// const mapDispatchToProps = dispatch => ({
+//   onFetchContacts: () => dispatch(fetchContacts()),
+// });
 
 export default ContactsView;

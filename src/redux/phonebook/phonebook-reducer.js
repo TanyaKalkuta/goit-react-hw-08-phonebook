@@ -28,9 +28,6 @@ const items = createReducer([], {
 });
 
 const loading = createReducer(false, {
-  // [fetchContacts.pending]: () => true,
-  // [fetchContacts.fulfilled]: () => false,
-  // [fetchContacts.rejected]: () => false,
   [fetchContactRequest]: () => true,
   [fetchContactSuccess]: () => false,
   [fetchContactError]: () => false,
