@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
-import s from './Views.css';
+import './Views.css';
+import { Button } from '@material-ui/core';
 
 const styles = {
   form: {
@@ -37,9 +38,9 @@ class RegisterView extends Component {
     const { name, email, password } = this.state;
 
     return (
-      <div className={s.RegisterContainer}>
-        <div className={s.RegisterSection}>
-          <h1 className={s.RegisterTitle}>Registration</h1>
+      <div className="RegisterContainer">
+        <div className="RegisterSection">
+          <h1 className="RegisterTitle">Registration</h1>
           <form
             onSubmit={this.handleSubmit}
             style={styles.form}
@@ -72,7 +73,9 @@ class RegisterView extends Component {
                 onChange={this.handleChange}
               />
             </label>
-            <button type="submit">Зарегистрироваться</button>
+            <Button type="submit" variant="contained">
+              Зарегистрироваться
+            </Button>
           </form>
         </div>
       </div>

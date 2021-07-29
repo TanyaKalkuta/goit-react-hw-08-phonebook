@@ -4,10 +4,11 @@ import Navigation from '../Navigation';
 import AuthNav from '../AuthNav';
 import UserMenu from '../UserMenu';
 import { authSelectors } from '../../redux/auth';
+import s from './AppNavBar.module.css';
 
 const AppBar = ({ isAuthenticated }) => {
   return (
-    <header className="header">
+    <header className={s.Header}>
       <Navigation />
       {isAuthenticated ? <UserMenu /> : <AuthNav />}
     </header>

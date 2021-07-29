@@ -1,4 +1,4 @@
-.stat_list {
+/* .stat_list {
   display: flex;
   list-style: none;
   padding: 0;
@@ -12,12 +12,13 @@
   height: 100%;
   padding: 10px;
   border: 1px solid rgb(240, 245, 245);
-}
+} */
 
 .contact_list {
   width: 400px;
   /* border: 3px solid olive; */
   padding: 20px;
+  color: rgb(75, 75, 2);
 }
 
 .contact_item {

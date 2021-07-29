@@ -31,32 +31,33 @@ class App extends Component {
   }
   render() {
     return (
-      <Container>
+      <>
         <AppBar />
-
-        <Suspense fallback={<Spinner />}>
-          <Switch>
-            <PublicRoute exact path={routes.home} component={HomeView} />
-            <PublicRoute
-              path={routes.register}
-              restricted
-              redirectTo={routes.home}
-              component={RegisterView}
-            />
-            <PublicRoute
-              path={routes.login}
-              restricted
-              redirectTo={routes.home}
-              component={LoginView}
-            />
-            <PrivateRoute
-              path={routes.contacts}
-              component={ContactsView}
-              redirectTo={routes.login}
-            />
-          </Switch>
-        </Suspense>
-      </Container>
+        <Container>
+          <Suspense fallback={<Spinner />}>
+            <Switch>
+              <PublicRoute exact path={routes.home} component={HomeView} />
+              <PublicRoute
+                path={routes.register}
+                restricted
+                redirectTo={routes.home}
+                component={RegisterView}
+              />
+              <PublicRoute
+                path={routes.login}
+                restricted
+                redirectTo={routes.home}
+                component={LoginView}
+              />
+              <PrivateRoute
+                path={routes.contacts}
+                component={ContactsView}
+                redirectTo={routes.login}
+              />
+            </Switch>
+          </Suspense>
+        </Container>
+      </>
     );
   }
 }

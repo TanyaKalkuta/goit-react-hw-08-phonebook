@@ -1,36 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { authSelectors, authOperations } from '../../redux/auth';
-
-// import { getUserName, logOut } from 'redux/auth';
-// import defaultAvatar from '../UserMenu/default-avatar';
-// import s from './UserMenu.module.css';
-const styles = {
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  avatar: {
-    marginRight: 4,
-  },
-  name: {
-    fontWeight: 700,
-    marginRight: 12,
-  },
-};
+import defaultAvatar from '../UserMenu/default-avatar.png';
+import styles from './UserMenu.module.css';
+import { Button } from '@material-ui/core';
 
 const UserMenu = ({ name, avatar, onLogout }) => (
-  <div style={styles.container}>
-    <img src={avatar} alt="Avatar" style={styles.avatar} />
-    <span style={styles.name}>Welcome, {name}</span>
-    <button type="button" onClick={onLogout}>
+  <div className={styles.container}>
+    <img src={avatar} alt="Avatar" className={styles.avatar} />
+    <span className={styles.name}>Welcome, {name}</span>
+    <Button type="button" onClick={onLogout} variant="outlined" color="primary">
       Logout
-    </button>
+    </Button>
   </div>
 );
 const mapStateToProps = state => ({
   name: authSelectors.getUserName(state),
-  // avatar: defaultAvatar,
+  avatar: defaultAvatar,
 });
 
 const mapDispatchToProps = {

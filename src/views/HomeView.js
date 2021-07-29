@@ -1,11 +1,9 @@
 import React from 'react';
-// import s from './Views.css';
+import './Views.css';
 
 const HomeView = () => (
-  <div
-  // className={s.HomeContainer}
-  >
-    <h1 className="Home-title">Home Phonebook</h1>
+  <div className="HomeContainer">
+    <h1 className="Home-title">Your Phonebook</h1>
   </div>
 );
 

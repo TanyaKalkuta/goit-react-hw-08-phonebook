@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import routes from '../../routes';
 import { connect } from 'react-redux';
 import { authSelectors } from '../../redux/auth';
+import './Navigation.css';
 
 const Navigation = ({ isAuthenticated }) => {
   return (

@@ -11,7 +11,8 @@
   top: 0%;
   right: 0px;
   left: 0px;
-  color: #3f51b5;
+  color: #b53f70;
+  background-color: rgb(161, 211, 141);
 }
 @media screen and (min-width: 720px) {
   .Header {
